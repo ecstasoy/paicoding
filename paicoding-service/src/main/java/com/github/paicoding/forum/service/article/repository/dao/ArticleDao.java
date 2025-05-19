@@ -265,9 +265,7 @@ public class ArticleDao extends ServiceImpl<ArticleMapper, ArticleDO> {
             record = new ReadCountDO().setDocumentId(articleId).setDocumentType(DocumentTypeEnum.ARTICLE.getCode()).setCnt(1);
             readCountMapper.insert(record);
         } else {
-            // fixme: 这里存在并发覆盖问题，推荐使用 update read_count set cnt = cnt + 1 where id = xxx
-            record.setCnt(record.getCnt() + 1);
-            readCountMapper.updateById(record);
+            readCountMapper.incrReadCntById(record.getId());
         }
         return record.getCnt();
     }
