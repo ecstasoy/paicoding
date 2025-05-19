@@ -117,6 +117,7 @@ CREATE TABLE `column_info`
     `publish_time` timestamp    NOT NULL DEFAULT '1970-01-02 00:00:00' COMMENT '上线时间',
     `create_time`  timestamp    NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
     `update_time`  timestamp    NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '最后更新时间',
+    `deleted`      tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否删除',
     PRIMARY KEY (`id`),
     KEY            `user_id` (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4  COMMENT='专栏';

@@ -1,5 +1,6 @@
 package com.github.paicoding.forum.service.article.repository.entity;
 
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.github.paicoding.forum.api.model.entity.BaseDO;
 import com.github.paicoding.forum.api.model.enums.column.ColumnStatusEnum;
@@ -76,4 +77,10 @@ public class ColumnInfoDO extends BaseDO {
      * 免费结束时间
      */
     private Date freeEndTime;
+
+    /**
+     * 逻辑删除标志
+     */
+    @TableLogic
+    private Integer deleted;
 }

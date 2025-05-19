@@ -172,8 +172,8 @@ VALUES(1, 1, '管理员', 'https://imgs.hhui.top/forum/avatar/0066.png', 'java',
 
 -- 准备数据
 INSERT INTO column_info
-(id, column_name, user_id, introduction, cover, state, publish_time, create_time, update_time)
-VALUES(1, '一灰灰的专栏', 1, '这里是小灰灰的技术专栏，欢迎关注', 'https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4ba0bc79579c488eb79df93cecd12390~tplv-k3u1fbpfcp-watermark.image', 1, '2022-09-15 01:00:00', '2022-09-15 01:00:00', '2022-09-15 01:00:00');
+(id, column_name, user_id, introduction, cover, state, publish_time, create_time, update_time, deleted)
+VALUES(1, '一灰灰的专栏', 1, '这里是小灰灰的技术专栏，欢迎关注', 'https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4ba0bc79579c488eb79df93cecd12390~tplv-k3u1fbpfcp-watermark.image', 1, '2022-09-15 01:00:00', '2022-09-15 01:00:00', '2022-09-15 01:00:00', 0);
 
 
 -- 添加专栏文章
